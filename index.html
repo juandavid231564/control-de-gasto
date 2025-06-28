@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro de Gastos Diarios</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Registro de Gastos Diarios</h1>
+
+    <form id="gastoForm">
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">Selecciona una categoría</option>
+        <option value="comida">Comida</option>
+        <option value="transporte">Transporte</option>
+        <option value="entretenimiento">Entretenimiento</option>
+        <option value="servicios">Servicios</option>
+        <option value="otros">Otros</option>
+      </select>
+
+      <label for="descripcion">Descripción:</label>
+      <input type="text" id="descripcion" name="descripcion" placeholder="Ej: Café de la mañana" required>
+
+      <label for="monto">Monto ($):</label>
+      <input type="number" id="monto" name="monto" step="0.01" min="0" placeholder="Ej: 25.50" required>
+
+      <button type="submit">Agregar Gasto</button>
+    </form>
+
+    <h2>Gastos Registrados</h2>
+    <table id="tablaGastos">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Categoría</th>
+          <th>Descripción</th>
+          <th>Monto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se insertan los gastos -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
